@@ -105,12 +105,12 @@ onMounted(() => {
   border: 1px solid #333;
 }
 .nav > a.active {
-  color: #1e73be;
-  border-color: #1e73be;
+  color: #00A99D;
+  border-color: #00A99D;
 }
 .nav > a:hover {
-  color: #1e73be;
-  border-color: #1e73be;
+  color: #00A99D;
+  border-color: #00A99D;
 }
 .news-container {
   overflow: hidden;
@@ -126,8 +126,8 @@ onMounted(() => {
   border-right: 1px solid transparent;
 }
 .news-container > li:hover {
-  color: #1e73be;
-  border: 1px solid #1e73be;
+  color: #00A99D;
+  border: 1px solid #00A99D;
   cursor: pointer;
 }
 .news-container > li:nth-of-type(2n) {

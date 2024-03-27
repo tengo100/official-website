@@ -1,27 +1,27 @@
 <template>
   <!-- 头部整体盒子 -->
   <div id="header" class="container-fuild">
-    <!-- 头部顶部 -->
-    <div class="header-top container-fuild hidden-xs">
-      <div class="container">
-        <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>{{ phone }}
-          <span class="glyphicon glyphicon-envelope"></span>{{ email }}
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
-        </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
+<!--    &lt;!&ndash; 头部顶部 &ndash;&gt;-->
+<!--    <div class="header-top container-fuild hidden-xs">-->
+<!--      <div class="container">-->
+<!--        <div class="server pull-left">-->
+<!--          <span class="glyphicon glyphicon-earphone"></span>{{ phone }}-->
+<!--          <span class="glyphicon glyphicon-envelope"></span>{{ email }}-->
+<!--          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务-->
+<!--        </div>-->
+<!--        <div class="shejiao pull-right">-->
+<!--          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！-->
+<!--          <span class="glyphicon glyphicon-hand-left"></span>-->
 
-          <a
-            href="https://github.com/neveryu"
-            target="_blank"
-            style="color: #fc5531; font-size: 18px; cursor: pointer"
-            >Github</a
-          >
-        </div>
-      </div>
-    </div>
+<!--          <a-->
+<!--            href="https://github.com/neveryu"-->
+<!--            target="_blank"-->
+<!--            style="color: #fc5531; font-size: 18px; cursor: pointer"-->
+<!--            >Github</a-->
+<!--          >-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
@@ -110,42 +110,40 @@ const navList = [
     children: []
   },
   {
-    name: '软件产品',
+    name: '文档中心',
     path: '/software',
     children: [
       {
-        name: '智能小镇管理系统',
+        name: '白皮书',
         path: '/software/smartTown'
       },
       {
-        name: '大数据管理系统',
+        name: '文档',
         path: '/software/bigData'
       }
     ]
   },
   {
-    name: '相关服务',
+    name: '开放平台',
     path: '/service',
-    children: []
+    children: [
+      {
+        name: '首页',
+        path: '/software/smartTown'
+      },
+      {
+        name: '文档中心',
+        path: '/software/bigData'
+      },
+      {
+        name: 'Open SDK',
+        path: '/software/bigData'
+      }
+    ]
   },
   {
-    name: '新闻动态',
+    name: '社区',
     path: '/newsinformation',
-    children: []
-  },
-  {
-    name: '公司介绍',
-    path: '/companyintroduction',
-    children: []
-  },
-  {
-    name: '工作机会',
-    path: '/jobchance',
-    children: []
-  },
-  {
-    name: '联系我们',
-    path: '/contactus',
     children: []
   }
 ]
@@ -198,7 +196,7 @@ function menuClick() {
 
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 95px;
+  width: 141px;
   height: 45px;
   position: absolute;
   top: 0;
@@ -246,7 +244,7 @@ function menuClick() {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: #1e73be;
+  background-color: #00A99D;
 }
 
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
@@ -257,7 +255,7 @@ function menuClick() {
 
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #1e73be;
+  color: #00A99D;
   text-decoration: none;
 }
 
@@ -275,9 +273,9 @@ function menuClick() {
 
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #1e73be;
+  color: #00A99D;
   text-decoration: none;
-  border-bottom: 2px solid #1e73be;
+  border-bottom: 2px solid #00A99D;
 }
 
 /* 导航栏 每个导航下面的二级导航容器 */
@@ -327,7 +325,7 @@ function menuClick() {
 
   /* 导航栏logo图片 */
   #header .header-nav-m .header-nav-m-logo img {
-    width: 95px;
+    width: 141px;
     height: 45px;
     position: absolute;
     top: 0;
@@ -343,7 +341,7 @@ function menuClick() {
     height: 50px;
     font-size: 20px;
     line-height: 50px;
-    background: #474747;
+    background: #00A99D;
     position: relative;
   }
 
@@ -366,7 +364,7 @@ function menuClick() {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #474747;
+    background: #00A99D;
     z-index: 9999999;
   }
 
