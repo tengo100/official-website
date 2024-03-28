@@ -28,28 +28,27 @@ const routes = [
         }
       },
       {
-        path: '/software',
-        name: 'software',
-        component: () => import('@/view/Software.vue'),
-        redirect: '/software/smartTown',
+        path: '/docs',
+        name: 'docs',
+        component: () => import('@/view/Docs.vue'),
         meta: {
-          title: '软件产品'
+          title: '文档中心'
         },
         children: [
           {
-            path: '/software/smartTown',
-            name: 'smartTown',
-            component: () => import('@/view/Software_smartTown.vue'),
+            path: '/docs/white-paper',
+            name: 'WhitePaper',
+            component: () => import('@/view/WhitePaper.vue'),
             meta: {
-              title: '软件产品丨智能小镇管理系统'
+              title: '白皮书'
             }
           },
           {
-            path: '/software/bigData',
-            name: 'bigData',
-            component: () => import('@/view/Software_bigData.vue'),
+            path: '/docs/doc-center',
+            name: 'DocCenter',
+            component: () => import('@/view/DocCenter.vue'),
             meta: {
-              title: '软件产品丨大数据管理系统'
+              title: '文档中心'
             }
           }
         ]
@@ -73,11 +72,11 @@ const routes = [
         }
       },
       {
-        path: '/newsinformation',
-        name: 'newsInformation',
-        component: () => import('@/view/NewsInformation.vue'),
+        path: '/community',
+        name: 'Community',
+        component: () => import('@/view/Community.vue'),
         meta: {
-          title: '新闻动态'
+          title: '社区'
         }
       },
       {

@@ -1,28 +1,6 @@
 <template>
   <!-- 头部整体盒子 -->
   <div id="header" class="container-fuild">
-<!--    &lt;!&ndash; 头部顶部 &ndash;&gt;-->
-<!--    <div class="header-top container-fuild hidden-xs">-->
-<!--      <div class="container">-->
-<!--        <div class="server pull-left">-->
-<!--          <span class="glyphicon glyphicon-earphone"></span>{{ phone }}-->
-<!--          <span class="glyphicon glyphicon-envelope"></span>{{ email }}-->
-<!--          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务-->
-<!--        </div>-->
-<!--        <div class="shejiao pull-right">-->
-<!--          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！-->
-<!--          <span class="glyphicon glyphicon-hand-left"></span>-->
-
-<!--          <a-->
-<!--            href="https://github.com/neveryu"-->
-<!--            target="_blank"-->
-<!--            style="color: #fc5531; font-size: 18px; cursor: pointer"-->
-<!--            >Github</a-->
-<!--          >-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-    <!-- 电脑导航 -->
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
@@ -36,7 +14,8 @@
           :class="index == navIndex ? 'active' : ''"
           @click="navClick(index, item.name)"
         >
-          <router-link :to="item.path">
+          <a v-if="item.islink" :href="item.path" target="_blank">{{item.name}}</a>
+          <router-link v-else :to="item.path">
             {{ item.name }}
             <span
               v-if="item.children.length > 0"
@@ -111,39 +90,29 @@ const navList = [
   },
   {
     name: '文档中心',
-    path: '/software',
+    path: '/docs',
     children: [
       {
         name: '白皮书',
-        path: '/software/smartTown'
+        path: '/docs/white-paper'
       },
       {
         name: '文档',
-        path: '/software/bigData'
+        path: '/docs/doc-center'
       }
     ]
   },
   {
     name: '开放平台',
-    path: '/service',
+    path: 'http://localhost:8080/',
+    islink: true,
     children: [
-      {
-        name: '首页',
-        path: '/software/smartTown'
-      },
-      {
-        name: '文档中心',
-        path: '/software/bigData'
-      },
-      {
-        name: 'Open SDK',
-        path: '/software/bigData'
-      }
     ]
   },
   {
     name: '社区',
-    path: '/newsinformation',
+    path: 'http://localhost:9528/',
+    islink: true,
     children: []
   }
 ]
@@ -183,21 +152,21 @@ function menuClick() {
 
 /* 导航栏 */
 #header .header-nav {
-  height: 110px;
+  height: 60px;
 }
 
 /* 导航栏logo */
 #header .header-nav .header-nav-logo {
   width: 100px;
-  height: 100%;
   float: left;
+  height: 100%;
   position: relative;
+  margin-right: 100px;
 }
 
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 141px;
-  height: 45px;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -212,8 +181,8 @@ function menuClick() {
 }
 
 #header .header-nav .header-nav-wrapper {
-  line-height: 110px;
-  float: right;
+  line-height: 60px;
+  /*float: right;*/
   margin: 0;
   max-width: 800px;
 }
@@ -229,7 +198,6 @@ function menuClick() {
 #header .header-nav .header-nav-wrapper > li > a {
   color: #000;
   font-size: 15px;
-  font-weight: bold;
   padding: 15px 0;
   position: relative;
 }
@@ -294,7 +262,8 @@ function menuClick() {
 #header .header-nav .header-nav-wrapper > li > dl > dt {
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  /*border-bottom: 1px solid #ccc;*/
+  font-weight: normal;
 }
 
 /* 导航栏 每个导航下面的二级导航容器的每个导航 当鼠标滑上时的样式*/
@@ -311,6 +280,10 @@ function menuClick() {
   cursor: pointer;
   background: #ccc;
 }
+#header .header-nav .header-nav-wrapper > li > dl > dt:hover a{
+  color: #00A99D;
+}
+
 
 @media screen and (max-width: 997px) {
   #header .header-nav-m {
