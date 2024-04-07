@@ -4,7 +4,7 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png" />
+        <img src="@/assets/img/logo.png" />
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
@@ -133,7 +133,7 @@ function menuClick() {
 <style scoped>
 /* 顶部 */
 #header {
-  background: #f4f4f4;
+  background: linear-gradient(90deg,#009ba2, #008d4f);
   transition: all ease 0.6s;
 }
 
@@ -152,12 +152,12 @@ function menuClick() {
 
 /* 导航栏 */
 #header .header-nav {
-  height: 60px;
+  height: 67px;
 }
 
 /* 导航栏logo */
 #header .header-nav .header-nav-logo {
-  width: 100px;
+  width: 350px;
   float: left;
   height: 100%;
   position: relative;
@@ -181,7 +181,7 @@ function menuClick() {
 }
 
 #header .header-nav .header-nav-wrapper {
-  line-height: 60px;
+  line-height: 67px;
   /*float: right;*/
   margin: 0;
   max-width: 800px;
@@ -196,7 +196,7 @@ function menuClick() {
 
 /* 导航栏 每个导航下面的 a 链接 */
 #header .header-nav .header-nav-wrapper > li > a {
-  color: #000;
+  color: #fff;
   font-size: 15px;
   padding: 15px 0;
   position: relative;
@@ -223,7 +223,7 @@ function menuClick() {
 
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #00A99D;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -241,9 +241,9 @@ function menuClick() {
 
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #00A99D;
+  color: #fff;
   text-decoration: none;
-  border-bottom: 2px solid #00A99D;
+  border-bottom: 2px solid #fff;
 }
 
 /* 导航栏 每个导航下面的二级导航容器 */
@@ -254,16 +254,18 @@ function menuClick() {
   top: 80%;
   left: 0;
   z-index: 999999;
-  box-shadow: 0 0 3px 1px #ccc;
-  background: #fff;
+  background: linear-gradient(90deg,#009ba2, #008d4f);
 }
 
 /* 导航栏 每个导航下面的二级导航容器的每个导航 */
 #header .header-nav .header-nav-wrapper > li > dl > dt {
   width: 100%;
   padding: 10px;
-  /*border-bottom: 1px solid #ccc;*/
+  border-bottom: 1px solid #ccc;
   font-weight: normal;
+}
+#header .header-nav .header-nav-wrapper > li > dl > dt a{
+  color: #fff;
 }
 
 /* 导航栏 每个导航下面的二级导航容器的每个导航 当鼠标滑上时的样式*/
@@ -278,10 +280,9 @@ function menuClick() {
 
 #header .header-nav .header-nav-wrapper > li > dl > dt:hover {
   cursor: pointer;
-  background: #ccc;
 }
 #header .header-nav .header-nav-wrapper > li > dl > dt:hover a{
-  color: #00A99D;
+  color: #fff;
 }
 
 

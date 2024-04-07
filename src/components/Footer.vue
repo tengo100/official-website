@@ -1,7 +1,7 @@
 <template>
   <div id="footer" class="container-fluid">
     <div class="logo">
-      <img src="@/assets/img/logo_black.png" alt="logo图" />
+      <img src="@/assets/img/logo.png" alt="logo图" />
     </div>
     <div class="address_tel_fax">
       <p>地址：{{ address }}</p>
@@ -30,14 +30,13 @@ const qqgroup = import.meta.env.VITE_APP_QQGROUP
   width: 100%;
   height: 100%;
   color: #fff;
-  background: #474747;
+  background: linear-gradient(90deg,#009ba2, #008d4f);
   overflow: hidden;
   text-align: center;
 }
 
 .logo {
-  width: 95px;
-  height: 45px;
+  width: 350px;
   margin: 50px auto 20px;
 
 }
@@ -51,20 +50,20 @@ const qqgroup = import.meta.env.VITE_APP_QQGROUP
 }
 
 .address_tel_fax {
-  color: #d3d3d3;
+  color: #fff;
   font-size: 14px;
   margin: 10px 0;
 }
 
 .email_wx {
-  color: #d3d3d3;
+  color: #fff;
   font-size: 14px;
 }
 
 .copy {
-  color: #d3d3d3;
+  color: #fff;
   font-size: 14px;
-  margin: 50px 0 10px;
+  margin: 15px 0 10px;
 }
 
 @media screen and (max-width: 997px) {
