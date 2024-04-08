@@ -1,106 +1,356 @@
 <template>
   <div>
-    <div class="doc-kv">
+    <div class="doc-kv" :style="{'background':'url('+docbg+') no-repeat center center'}">
         <div class="doc-title">文档中心</div>
+        <img class="doc-pic" :src="docqj">
     </div>
-    <div class="container text-center bg-info">
-      <h1>白皮书</h1>
-      <div class="content">白皮书内容</div>
+    <div class="doc-white">
+      <div class="doc-white-title">白皮书</div>
+      <div class="doc-white-sub">技术中心的白皮书通常是一份详细的技术文档，旨在提供关于特定技术、解决方案或产品的深入信息和指导。</div>
+      <div class="doc-white-content-wp">
+          <div class="doc-white-content">
+             <img class="book" :src="book">
+            <div class="doc-white-item-wp">
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">概述</div>
+                <div class="doc-white-item-description">对于技术、解决方案或产品的简介和总体概述。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">技术原理</div>
+                <div class="doc-white-item-description">详细解释技术的工作原理、基本概念和核心机制。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">架构设计</div>
+                <div class="doc-white-item-description">介绍技术的整体架构设计，包括组件、模块和交互方式等。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">实施指南</div>
+                <div class="doc-white-item-description">提供实施该技术或解决方案的详细步骤和指导，包括环境配置、安装和设置等。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">使用案例</div>
+                <div class="doc-white-item-description">展示该技术或解决方案在真实场景中的应用案例，描述如何解决特定问题或满足特定需求。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">性能评估</div>
+                <div class="doc-white-item-description">对技术或解决方案的性能进行评估和测量，包括吞吐量、响应时间和可扩展性等方面的数据和指标。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">安全性和隐私</div>
+                <div class="doc-white-item-description">讨论技术或解决方案的安全性措施和隐私保护机制，包括身份验证、数据加密和访问控制等。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">故障排除和故障恢复</div>
+                <div class="doc-white-item-description">对技术或解决方案的性能进行评估和测量，包括吞吐量、响应时间和可扩展性等方面的数据和指标。</div>
+              </div>
+              <div class="doc-white-item">
+                <div class="doc-white-item-title">安全性和隐私</div>
+                <div class="doc-white-item-description">讨论技术或解决方案的安全性措施和隐私保护机制，包括身份验证、数据加密和访问控制等。</div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
-    <div class="container text-center bg-success">
-      <h1>文档</h1>
-      <div class="content">文档内容</div>
-      <a href="http://localhost:8080/pages/9a7ee40fc232253e/" target="_blank">Go Center</a>
+    <div class="doc-center">
+      <div class="doc-white-title">文档</div>
+      <div class="doc-center-content">
+          <div class="doc-center-item">
+            <div>开发指南</div>
+            <i>></i>
+          </div>
+        <div class="doc-center-item">
+          <div>API 参考文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>快速入门指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>教程和示例</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>数据模型文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>集成指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>安装和配置手册</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>常见问题解答</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>最佳实践指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>用户认证文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>数据库集成文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>SDK 使用文档</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>安全性指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>错误码和异常处理文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>性能优化指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>插件和扩展开发文档</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>更新日志和版本历史</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>设计原则和架构说明</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>部署和运维文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>API 授权和访问控制文档</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>架构设计和分布式系统文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>安全漏洞和漏洞修复指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>数据验证和输入验证文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>数据追踪和日志分析文档</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>高可用性和容灾方案文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>缓存和性能优化文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>事件驱动架构和消息队列文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>API 文档的测试和文档覆盖率指南</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>数据库查询优化和索引设计文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>国际化和本地化支持文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>安全编码实践和防御性编程指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>文档生成工具和文档自动化流程</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>用户反馈和问题解决指南</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>数据隐私和GDPR合规性文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>连续集成和持续交付文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>API 文档的版本控制和迁移策略</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>代码质量和静态代码分析文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>开发者认证和访问控制文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>代码库和版本控制工具文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>API 文档的性能测试和负载测试指南</div>
+          <i>></i>
+        </div>
+      </div>
+      <a class="go-btn" style="margin-top: 8px" href="http://localhost:8080/pages/9a7ee40fc232253e/" target="_blank">更多文档 ></a>
     </div>
-<!--    <div class="row">-->
-<!--      <div id="left" class="col-md-4 col-xs-12">-->
-<!--        <ul class="left-container wow bounceInLeft">-->
-<!--          <p>软件产品</p>-->
-<!--          <li v-for="(item, index) in softwareList" :key="index">-->
-<!--            <router-link :to="item.path">{{ item.name }}</router-link>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <div id="right" class="col-md-8 col-xs-12 wow bounceInRight">-->
-<!--        <router-view></router-view>-->
-<!--      </div>-->
-<!--    </div>-->
   </div>
 </template>
 
 <script setup name="Docs">
-import WOW from 'wow.js'
 import { onMounted } from 'vue'
-
-const softwareList = [
-  {
-    path: '/software/smartTown',
-    name: '智能小镇管理系统'
-  },
-  {
-    path: '/software/bigData',
-    name: '大数据管理系统'
-  }
-]
+const docbg = new URL('../assets/img/v1/document_banner_bj.png', import.meta.url).href
+import docqj from '@/assets/img/v1/document_banner_qj.png'
+import book from '@/assets/img/v1/book.png'
 onMounted(() => {
-  // var wow = new WOW()
-  // wow.init()
 })
 </script>
 
 <style scoped>
 .doc-kv{
   height: 300px;
-  background: linear-gradient(to bottom,#00A99D,#fff);
-  padding-top: 60px;
-  text-align: center;
+  padding-top: 1px;
+  position: relative;
 }
 .doc-title{
-  color: #fff;
-  font-size: 36px;
-}
-.content{
-  height: 300px;
-}
-#left {
-  margin: 50px 0;
-}
-.left-container {
-  width: 60%;
-  margin: 0 auto;
-  border: 1px solid #474747;
-  border-radius: 5px;
-}
-.left-container > p {
-  text-align: center;
-  line-height: 45px;
-  padding: 0;
-  margin: 0;
-  background: #474747;
-  color: #fff;
-  font-size: 18px;
+  color: #159477;
+  font-size: 48px;
   font-weight: bold;
+  line-height: 300px;
+  margin-left: 18.22%;
 }
-.left-container > li {
+.doc-pic{
+  position: absolute;
+  width: 414px;
+ bottom: 0;
+  right:14.5%;
+}
+.doc-white{
+  height: 730px;
+  padding-top:1px;
+  background: linear-gradient(180deg,rgba(255,255,255,0.84), #f2f3f5);
+}
+.doc-white-title{
+  font-size: 32px;
+  color: #333;
   text-align: center;
-  height: 38px;
-  line-height: 38px;
-  margin: 0;
-  border-top: 1px solid #474747;
+  margin-top: 48px;
+  font-weight: 700;
 }
-.left-container > li > a {
-  text-decoration: none;
+.doc-white-sub{
+  color: #159477;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 33px;
 }
-.left-container > li:hover {
-  background: #928989;
+.doc-white-content-wp{
+  height: 420px;
+  background: linear-gradient(91deg,rgba(0,155,162,0.00) 1%, rgba(0,152,144,0.81) 30%, rgba(0,142,86,0.71) 77%, rgba(0,141,79,0.00) 99%);
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.07);
+  padding-top: 1px;
+  margin-top: 75px;
 }
-#right {
-  padding: 50px 0;
+.doc-white-content{
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  display: flex;
+}
+.doc-white-item-wp{
+  margin: 34px 0;
+  width: 100%;
+}
+.doc-white-item{
+  display: flex;
+  background: rgba(0,0,0,0.06);
+  margin-bottom: 8px;
+}
+.doc-white-item-title{
+  min-width: 147px;
+  max-width: 147px;
+  line-height: 32px;
+  padding-left: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.doc-white-item-description{
+  font-weight: 400;
+  color: #fff;
+  font-size: 14px;
+  line-height: 32px;
+  border-left: 1px solid;
+  padding-left: 10px;
+}
+.book{
+  width: 379px;
+  margin-top: -48px;
+}
+.doc-center{
+  background: #f2f3f5;
+  padding-top: 1px;
+  padding-bottom: 24px;
+}
+.doc-center-content{
+  width: 1200px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.doc-center-item{
+  font-size: 14px;
+  line-height: 80px;
+  background: #fff;
+  min-width: 290px;
+  color: #555555;
+  padding:0 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.doc-center-item:hover{
+  color: #159477;
+  font-weight: 500;
+  background: url("@/assets/img/v1/hover_bj.png");
+  background-size: 100% 100%;
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.07);
 }
 @media screen and (max-width: 768px) {
-  #right {
-    padding: 15px;
-  }
+
 }
 </style>
 

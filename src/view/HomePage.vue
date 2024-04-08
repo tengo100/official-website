@@ -252,17 +252,6 @@ onMounted(() => {
 }
 </style>
 <style scoped>
-.go-btn{
-  width: 137px;
-  height: 50px;
-  border: 1px solid #148e50;
-  text-align: center;
-  color: #148e50;
-  font-size: 18px;
-  line-height: 50px;
-  margin: auto;
-  cursor: pointer;
-}
 /* 整体盒子 */
 #HomePage {
   width: 100%;

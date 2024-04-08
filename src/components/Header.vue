@@ -1,7 +1,7 @@
 <template>
   <!-- 头部整体盒子 -->
-  <div id="header" class="container-fuild">
-    <div class="header-nav container hidden-xs">
+  <div id="header">
+    <div class="header-nav hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
         <img src="@/assets/img/logo.png" />
@@ -104,14 +104,14 @@ const navList = [
   },
   {
     name: '开放平台',
-    path: 'http://localhost:8080/',
+    path: '/platform',
     islink: true,
     children: [
     ]
   },
   {
     name: '社区',
-    path: 'http://localhost:9528/',
+    path: '/xlyk-answer',
     islink: true,
     children: []
   }
@@ -161,7 +161,7 @@ function menuClick() {
   float: left;
   height: 100%;
   position: relative;
-  margin-right: 100px;
+  margin-left: 50px;
 }
 
 /* 导航栏logo图片 */
@@ -182,9 +182,10 @@ function menuClick() {
 
 #header .header-nav .header-nav-wrapper {
   line-height: 67px;
-  /*float: right;*/
-  margin: 0;
+  float: right;
+  margin: 0 50px 0 0;
   max-width: 800px;
+
 }
 
 /* 导航栏 每个导航 */
