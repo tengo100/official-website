@@ -20,11 +20,12 @@
         :key="index"
       >
         <div class="kv" :style="{'background':'url('+item.img+') no-repeat center center'}">
+          <img class="swiper-lazy subimg" :data-src="item.subimg" alt="轮播图" />
           <div class="swiper-slide-title">
             <h1>{{ item.title }}</h1>
             <p>{{ item.content }}</p>
           </div>
-          <img class="swiper-lazy subimg" :data-src="item.subimg" alt="轮播图" />
+
 
         </div>
 <!--        <div class="swiper-lazy-preloader"></div>-->
@@ -34,7 +35,7 @@
      <!--微服务架构-->
     <div id="micro-service" class="micro-service" :style="{'background':'url('+microbg+') no-repeat center center'}" >
       <div class="title">微服务架构-低代码开发-AI 赋能 为开发者和企业提供了强大的能力和创新的机会</div>
-      <div class="content-title" style="margin-top: 100px">微服务架构</div>
+      <div class="content-title t1">微服务架构</div>
       <div class="micro-service-content">
         <div class="micro-service-item">
           <img class="micro-service-icon" :src="microservices">
@@ -55,7 +56,7 @@
     </div>
      <!--低代码开发-->
     <div id="low-code" class="low-code" :style="{'background':'url('+lowcodebg+') no-repeat center center'}">
-      <div class="content-title" style="margin-top: 80px">低代码开发</div>
+      <div class="content-title t2">低代码开发</div>
       <div class="lowcode-content">
         <div class="lowcode-text">低代码平台是一种开发工具，它通过可视化拖放和少量编码，使开发过程更加简单、快速和可靠。它使非专业开发者能够参与软件开发，减少了繁琐的手动编码工作，加速了应用程序的开发周期，提高了开发效率。</div>
         <div class="lowcode-pic" :style="{'background':'url('+lowcodeqj+') no-repeat center center'}">
@@ -71,7 +72,7 @@
     </div>
     <!--AI赋能-->
     <div id="ai" class="ai" :style="{'background':'url('+aibg+') no-repeat center center'}">
-      <div class="content-title" style="margin-top: 57px">AI赋能</div>
+      <div class="content-title t3">AI赋能</div>
       <div class="ai-content">
         <img class="ai-pic" :src="aiqj">
         <div class="ai-text">
@@ -81,7 +82,7 @@
     </div>
     <!--问答社区-->
     <div id="answer" class="answer" :style="{'background':'url('+answerbg+') no-repeat center center'}">
-      <div class="content-title" style="margin-top: 50px">问答社区</div>
+      <div class="content-title t4">问答社区</div>
       <div class="answer-content">
         <div class="answer-text">
             <div class="answer-text-wp">
@@ -133,11 +134,11 @@
           </div>
         </div>
       </div>
-      <div class="go-btn" style="margin-top: 30px">进入社区 ></div>
+      <div class="go-btn mb20" style="margin-top: 30px">进入社区 ></div>
     </div>
     <!--客户案例-->
     <div id="customer" class="customer" :style="{'background':'url('+customerbg+') no-repeat center center'}">
-      <div class="content-title" style="margin-top: 50px">客户案例</div>
+      <div class="content-title t5">客户案例</div>
       <div class="customer-content">
         <div class="customer-item">
           <div class="customer-logo">
@@ -305,7 +306,9 @@ onMounted(() => {
   height: 731px;
   padding-top: 1px;
 }
-
+.t1{
+  margin-top: 100px;
+}
 .micro-service .title{
   line-height: 97px;
   font-size: 28px;
@@ -375,6 +378,9 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   height: 360px;
+}
+.t2{
+  margin-top: 80px;
 }
 .lowcode-text{
   width: 351px;
@@ -447,6 +453,9 @@ onMounted(() => {
   justify-content: space-between;
   margin: 33px auto 0;
 }
+.t3{
+  margin-top: 57px;
+}
 .ai-pic{
   width: 391px;
   margin-left: 50px;
@@ -472,7 +481,9 @@ onMounted(() => {
   margin: 35px auto 0;
   display: flex;
   justify-content: space-between;
-
+}
+.t4{
+  margin-top: 50px;
 }
 .answer-text,.answer-pic{
   border: 16px solid rgba(255,255,255,0);
@@ -545,6 +556,9 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
 }
+.t5{
+  margin-top: 50px;
+}
 .customer-item{
   max-width: 285px;
   background: rgba(255,255,255,0.90);
@@ -593,106 +607,175 @@ onMounted(() => {
   #swiper {
     height: 200px;
   }
-
-  #bigData {
-    padding: 30px;
+  #swiper .banner-swiper .swiper-slide-title {
+    left: 5%;
   }
 
-  #bigData .bigData-title {
+  #swiper .banner-swiper .swiper-slide-title > h1 {
+    font-size: 24px;
+  }
+
+  #swiper .banner-swiper .swiper-slide-title > p {
     font-size: 20px;
   }
 
-  #bigData .bigData-device {
-    font-size: 20px;
-    margin: 10px 0 10px;
+  .micro-service{
+    height: auto;
+    background: linear-gradient(45deg, #e6f8f1, #f3f5f4)!important;
   }
-
-  #contactUs {
-    height: 200px;
-    transition: all ease 0.6s;
+  .micro-service-content{
+    width: 100%;
+    flex-direction: column;
+    padding-top: 1px;
+    padding-bottom: 20px;
   }
-
-  #contactUs .contactUs-container {
-    padding-top: 0;
-  }
-
-  #contactUs .contactUs-container h1 {
-    font-size: 25px;
-  }
-
-  #contactUs .contactUs-container h3 {
-    font-size: 18px;
-  }
-
-  #contactUs .contactUs-container button {
-    width: 200px;
-    height: 30px;
+  .t1{
     margin-top: 20px;
   }
-
-  #contactUs .contactUs-container .contactUs-contactWay span {
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    margin: 10px;
-  }
-
-  #customer {
-    padding: 30px 0;
-    box-sizing: border-box;
-    background: #fff;
-  }
-
-  #customer .customer-title {
+  .micro-service .title{
+    line-height: 2;
     font-size: 16px;
-    font-weight: bold;
+    border-bottom: 3px solid;
+    width: auto;
+    margin: auto;
+    letter-spacing: 2px;
+    padding: 10px;
+    position: static;
   }
-
-  #customer .customer-logo img {
-    width: 48px;
-    height: 48px;
+  .micro-service-item{
+    width: 90%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 90px;
   }
-
-  #customer .customer-block {
-    padding: 30px;
+  .micro-service-item:first-child{
+    margin-top: 0;
   }
-
-  #customer .customer-block > div {
-    padding: 30px 0;
+  /*低代码*/
+  .low-code{
+    height: auto;
   }
-
-  #whyChooseUs {
-    padding: 20px 0;
-    transition: all ease 0.6s;
+  .lowcode-content{
+    width: auto;
+    flex-direction: column;
+    height: auto;
   }
-
-  #whyChooseUs .whyChooseUs-title p:nth-of-type(1) {
-    font-size: 20px;
-    font-weight: 700;
+  .t2{
+    margin-top: 20px;
   }
-
-  #whyChooseUs .whyChooseUs-title p:nth-of-type(2) {
+  .lowcode-text{
+    width: auto;
+    margin: 20px;
+  }
+  .lowcode-pic{
+    width: 100%;
+    height: 200px;
+    margin-right: 0;
+  }
+  .lowcode-btn{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
     font-size: 12px;
   }
-
-  #whyChooseUs .server-block {
-    padding: 50px 0;
-    border: 1px solid #ccc;
-    border-bottom: 5px solid #ccc;
+  .lowcode-btn1{
+    margin: 18px auto 0;
+  }
+  .lowcode-btn2{
+    left: 57px;
+    top: 66px;
+  }
+  .lowcode-btn3{
+    top: 66px;
+    right: 57px;
+  }
+  .lowcode-btn4{
+    top: 117px;
+    left: 20px;
+  }
+  .lowcode-btn5{
+    top: 117px;
+    right: 20px;
+  }
+  .lowcode-btn6{
+    top: 170px;
+    left: 0px;
+  }
+  .lowcode-btn7{
+    top: 170px;
+    right: 0px;
+  }
+  /*AI赋能*/
+  .ai{
+    height: auto;
+  }
+  .t3{
+    margin-top: 30px;
+  }
+  .ai-content{
+    width: auto;
+    flex-direction: column;
+  }
+  .ai-pic{
+    width: auto;
+    margin-left: 50px;
+  }
+  .ai-text{
+    width: auto;
+    height: auto;
+    line-height: 42px;
+    padding: 30px;
+    text-align: justify;
+    margin-top: 30px;
   }
 
-  #whyChooseUs .server-block img {
-    width: 48px;
-    height: 48px;
+  .answer{
+    height: auto;
+    background: #e8f4f0!important;
+    padding-bottom: 30px;
+  }
+  .answer-content{
+    width: auto;
+    margin: 20px auto 0;
+    flex-direction: column;
+  }
+  .t4{
+    margin-top: 20px;
+  }
+  .answer-text{
+    margin-right: 0;
+  }
+  .answer-pic{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .answer-pic-item{
+    float: none;
+    margin-bottom: 16px;
+    min-width: 160px;
+    max-width: 160px;
   }
 
-  #whyChooseUs .server-block > p {
-    font-size: 20px;
-    margin: 30px 0;
+  .customer{
+    height: auto;
+    background: #eaf8f6!important;
   }
-
-  #whyChooseUs .server-block > div {
-    color: #ccc;
+  .customer-content{
+    width: auto;
+    margin: 26px auto 0;
+    flex-wrap: wrap;
+  }
+  .t5{
+    margin-top: 20px;
+  }
+  .customer-item{
+    max-width: 90%;
+    min-width: 90%;
+   margin: 0 auto 20px;
   }
 }
 

@@ -36,7 +36,7 @@
       <div class="header-nav-m-logo">
         <img
           class="center-block"
-          src="@/assets/img/logo_black.png"
+          src="@/assets/img/logo.png"
           alt="logo"
         />
       </div>
@@ -294,14 +294,14 @@ function menuClick() {
 
   /* 导航栏logo容器 */
   #header .header-nav-m .header-nav-m-logo {
-    height: 80px;
+    height: 60px;
     position: relative;
   }
 
   /* 导航栏logo图片 */
   #header .header-nav-m .header-nav-m-logo img {
-    width: 141px;
-    height: 45px;
+    width: 320px;
+    /*height: 45px;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -313,9 +313,9 @@ function menuClick() {
   /* 导航栏  菜单容器 */
   #header .header-nav-m .header-nav-m-menu {
     color: #fff;
-    height: 50px;
-    font-size: 20px;
-    line-height: 50px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
     background: #00A99D;
     position: relative;
   }
@@ -336,7 +336,7 @@ function menuClick() {
   /* 导航栏 */
   #header .header-nav-m .header-nav-m-wrapper {
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: 0;
     width: 100%;
     background: #00A99D;
