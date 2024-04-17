@@ -350,7 +350,44 @@ onMounted(() => {
   box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.07);
 }
 @media screen and (max-width: 768px) {
-
+  .doc-white{
+    height: auto;
+  }
+  .doc-kv{
+    height: 200px;
+  }
+  .doc-title{
+    font-size: 30px;
+    line-height: 200px;
+  }
+  .doc-pic{
+    width: 40%;
+  }
+  .doc-white-title{
+    font-size: 24px;
+  }
+  .doc-white-sub{
+    font-size: 18px;
+  }
+  .book{
+    width: 80%;
+    margin: auto;
+  }
+  .doc-white-content-wp{
+    height: auto;
+  }
+  .doc-white-content{
+    width: auto;
+    flex-direction: column;
+  }
+  .doc-white-item-wp{
+    width: 90%;
+    margin: auto;
+  }
+  .doc-center-content{
+    width: auto;
+    justify-content: center;
+  }
 }
 </style>
 
