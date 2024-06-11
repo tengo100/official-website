@@ -104,6 +104,25 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '/oneplatform',
+    name: 'OnePlatFormView',
+    component: () => import('@/view/OnePlatform/Layout.vue'),
+    meta: {
+      title: '统一登录',
+      noLayout: true
+    },
+    children: [
+      {
+        path: '/login',
+        name: 'LoginView',
+        component: () => import('@/view/OnePlatform/Login/index.vue'),
+        meta: {
+          title: '登录'
+        }
+      },
+    ]
   }
 ]
 

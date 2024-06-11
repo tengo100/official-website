@@ -55,70 +55,70 @@
       <div class="doc-white-title">文档</div>
       <div class="doc-center-content">
           <div class="doc-center-item">
-            <div>开发指南</div>
+            <div>【钉钉OA】合同管理系统-合同结算单</div>
             <i>></i>
           </div>
         <div class="doc-center-item">
-          <div>API 参考文档</div>
+          <div>【钉钉OA】合同管理系统-合同签订</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>快速入门指南</div>
+          <div>【钉钉OA】合同管理系统-往来单位</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>教程和示例</div>
-          <i>></i>
-        </div>
-
-        <div class="doc-center-item">
-          <div>数据模型文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>集成指南</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>安装和配置手册</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>常见问题解答</div>
+          <div>【钉钉OA】合同管理系统-中标公示</div>
           <i>></i>
         </div>
 
         <div class="doc-center-item">
-          <div>最佳实践指南</div>
+          <div>【钉钉OA】全面预算管理系统-支出预算调剂单</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>用户认证文档</div>
+          <div>【钉钉OA】全面预算管理系统-支出预算调整单</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>数据库集成文档</div>
+          <div>【钉钉OA】全面预算管理系统-支出预算执行单</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>SDK 使用文档</div>
+          <div>【钉钉OA】全面预算管理系统-支出预算执行申请单</div>
           <i>></i>
         </div>
 
         <div class="doc-center-item">
-          <div>安全性指南</div>
+          <div>杏林云康单点登录对外接口文档</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>错误码和异常处理文档</div>
+          <div>杏林云康合同管理系统合同签订对接接口文档</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>性能优化指南</div>
+          <div>杏林云康合同管理系统签订申请对接接口文档</div>
           <i>></i>
         </div>
         <div class="doc-center-item">
-          <div>插件和扩展开发文档</div>
+          <div>杏林云康控制台-科室对外接口文档</div>
+          <i>></i>
+        </div>
+
+        <div class="doc-center-item">
+          <div>杏林云康控制台-职员对外接口文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>杏林云康审批流接口对接文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>杏林云康微信公众号获取access_token接口文档</div>
+          <i>></i>
+        </div>
+        <div class="doc-center-item">
+          <div>杏林云康资金支出管控系统与保融科技支付平台付款对接接口文档</div>
           <i>></i>
         </div>
 
@@ -336,11 +336,18 @@ onMounted(() => {
   line-height: 80px;
   background: #fff;
   min-width: 290px;
+
   color: #555555;
   padding:0 16px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+}
+.doc-center-item>div{
+  width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .doc-center-item:hover{
   color: #159477;
