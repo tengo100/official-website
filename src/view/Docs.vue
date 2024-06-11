@@ -54,74 +54,12 @@
     <div class="doc-center">
       <div class="doc-white-title">文档</div>
       <div class="doc-center-content">
-          <div class="doc-center-item">
-            <div>【钉钉OA】合同管理系统-合同结算单</div>
+          <div class="doc-center-item" v-for="item in docList" :key="item">
+            <div>
+              <a :href="'/develop/docs/'+item+'.doc'" :download="item+'.doc'">{{item}}</a>
+            </div>
             <i>></i>
           </div>
-        <div class="doc-center-item">
-          <div>【钉钉OA】合同管理系统-合同签订</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>【钉钉OA】合同管理系统-往来单位</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>【钉钉OA】合同管理系统-中标公示</div>
-          <i>></i>
-        </div>
-
-        <div class="doc-center-item">
-          <div>【钉钉OA】全面预算管理系统-支出预算调剂单</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>【钉钉OA】全面预算管理系统-支出预算调整单</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>【钉钉OA】全面预算管理系统-支出预算执行单</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>【钉钉OA】全面预算管理系统-支出预算执行申请单</div>
-          <i>></i>
-        </div>
-
-        <div class="doc-center-item">
-          <div>杏林云康单点登录对外接口文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>杏林云康合同管理系统合同签订对接接口文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>杏林云康合同管理系统签订申请对接接口文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>杏林云康控制台-科室对外接口文档</div>
-          <i>></i>
-        </div>
-
-        <div class="doc-center-item">
-          <div>杏林云康控制台-职员对外接口文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>杏林云康审批流接口对接文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>杏林云康微信公众号获取access_token接口文档</div>
-          <i>></i>
-        </div>
-        <div class="doc-center-item">
-          <div>杏林云康资金支出管控系统与保融科技支付平台付款对接接口文档</div>
-          <i>></i>
-        </div>
-
         <div class="doc-center-item">
           <div>更新日志和版本历史</div>
           <i>></i>
@@ -230,10 +168,28 @@
 </template>
 
 <script setup name="Docs">
-import { onMounted } from 'vue'
+import { onMounted,ref } from 'vue'
 const docbg = new URL('../assets/img/v1/document_banner_bj.png', import.meta.url).href
 import docqj from '@/assets/img/v1/document_banner_qj.png'
 import book from '@/assets/img/v1/book.png'
+const docList=ref([
+  '【钉钉OA】合同管理系统-合同结算单',
+  '【钉钉OA】合同管理系统-合同签订',
+  '【钉钉OA】合同管理系统-往来单位',
+  '【钉钉OA】合同管理系统-中标公示',
+  '【钉钉OA】全面预算管理系统-支出预算调剂单',
+  '【钉钉OA】全面预算管理系统-支出预算调整单',
+  '【钉钉OA】全面预算管理系统-支出预算执行单',
+  '【钉钉OA】全面预算管理系统-支出预算执行申请单',
+  '杏林云康单点登录对外接口文档',
+  '杏林云康合同管理系统合同签订对接接口文档',
+  '杏林云康合同管理系统签订申请对接接口文档',
+  '杏林云康控制台-科室对外接口文档',
+  '杏林云康控制台-职员对外接口文档',
+  '杏林云康审批流接口对接文档',
+  '杏林云康微信公众号获取access_token接口文档',
+  '杏林云康资金支出管控系统与保融科技支付平台付款对接接口文档'
+])
 onMounted(() => {
 })
 </script>
@@ -336,7 +292,6 @@ onMounted(() => {
   line-height: 80px;
   background: #fff;
   min-width: 290px;
-
   color: #555555;
   padding:0 16px;
   display: flex;
@@ -348,6 +303,13 @@ onMounted(() => {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.doc-center-item>div>a{
+  color: #555555;
+}
+.doc-center-item>div>a:hover{
+  text-decoration: none;
+  color: #159477;
 }
 .doc-center-item:hover{
   color: #159477;
