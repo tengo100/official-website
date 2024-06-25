@@ -67,6 +67,7 @@
           <div class="lowcode-btn lowcode-btn5">集成性和可扩展性</div>
           <div class="lowcode-btn lowcode-btn6">快速开发和部署</div>
           <div class="lowcode-btn lowcode-btn7">成本效益</div>
+          <a class="lowcode-btn lowcode-btn8" href="http://192.168.0.14:18080/youyaboot-admin/magicalcoder/index.html#/login" target="_blank">进入平台</a>
         </div>
       </div>
     </div>
@@ -443,6 +444,17 @@ onMounted(() => {
   top: 280px;
   right: -98px;
 }
+.lowcode-btn8{
+  display: block;
+  bottom: 0;
+  left:0;
+  right: 0;
+  margin: 0 auto 10px;
+  background: #138d4f;
+  width: 120px;
+  cursor: pointer;
+  text-decoration: none;
+}
 /*AI赋能*/
 .ai{
   height: 635px;
@@ -707,6 +719,9 @@ onMounted(() => {
   .lowcode-btn7{
     top: 170px;
     right: 0px;
+  }
+  .lowcode-btn8{
+   display: none;
   }
   /*AI赋能*/
   .ai{
