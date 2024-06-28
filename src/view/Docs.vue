@@ -51,8 +51,8 @@
           </div>
       </div>
     </div>
-    <div class="doc-center">
-      <div class="doc-white-title">文档</div>
+    <div class="doc-center" id="doc">
+      <div class="doc-white-title">技术文档</div>
       <div class="doc-center-content">
           <div class="doc-center-item" v-for="item in docList" :key="item">
             <div>

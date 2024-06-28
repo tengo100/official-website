@@ -97,7 +97,7 @@ const navList = [
         path: '/docs/white-paper'
       },
       {
-        name: '文档',
+        name: '技术文档',
         path: '/docs/doc-center'
       }
     ]
@@ -108,6 +108,12 @@ const navList = [
     islink: true,
     children: [
     ]
+  },
+  {
+    name: '低代码平台',
+    path: 'http://192.168.0.14:18080/youyaboot-admin/magicalcoder/index.html#/login',
+    islink: true,
+    children: []
   },
   {
     name: '社区',
